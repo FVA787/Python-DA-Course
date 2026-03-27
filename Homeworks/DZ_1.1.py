@@ -59,4 +59,20 @@ elif 15 < width < 50 or 15 < length < 50 or 15 < height < 50:
 else: 
     print("Коробка №3")
 
-    
+'''Напишем программу, которая будет определять, счастливый билет или нет, исходя из суммы первых трех и последних трех цифр номера билета'''
+
+import re
+ticket_number = input('введите шестизначный номер билета')
+
+first_3_figures = (int(re.search("^(\d)(\d)(\d)(\d)(\d)(\d)$", ticket_number).group(1)) + 
+int(re.search("^(\d)(\d)(\d)(\d)(\d)(\d)$", ticket_number).group(2)) +
+int(re.search("^(\d)(\d)(\d)(\d)(\d)(\d)$", ticket_number).group(3)))
+
+last_3_figures = (int(re.search("^(\d)(\d)(\d)(\d)(\d)(\d)$", ticket_number).group(4)) + 
+int(re.search("^(\d)(\d)(\d)(\d)(\d)(\d)$", ticket_number).group(5)) +
+int(re.search("^(\d)(\d)(\d)(\d)(\d)(\d)$", ticket_number).group(6)))
+
+if first_3_figures == last_3_figures:
+    print("Счастливый билет")
+else:
+    print ("Несчастливый билет")
