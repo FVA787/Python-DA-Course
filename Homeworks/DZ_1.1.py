@@ -37,7 +37,7 @@ signs = {
 "февраль": (20, "водолей", "рыбы")
 }
 day, month = int(input('введите день')), input('введите месяц')
-print(signs[month][2]) if day >= signs[month][0] else print(signs[month][1])
+print('Ваш знак зодиака' , signs[month][2]) if day >= signs[month][0] else print('Ваш знак зодиака' , signs[month][1])
 
 
     
