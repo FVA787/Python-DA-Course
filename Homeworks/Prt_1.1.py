@@ -62,7 +62,7 @@ else:
 '''Напишем программу, которая будет определять, счастливый билет или нет, исходя из суммы первых трех и последних трех цифр в номере билета'''
 
 import re
-ticket_number = input('введите шестизначный номер билета')
+ticket_number = input('введите шестизначный номер вашего билета')
 
 first_3_figures = (int(re.search("^(\d)(\d)(\d)(\d)(\d)(\d)$", ticket_number).group(1)) + 
 int(re.search("^(\d)(\d)(\d)(\d)(\d)(\d)$", ticket_number).group(2)) +
