@@ -50,11 +50,11 @@ width = int(input('введите ширину'))
 length = int(input('введите длину'))
 height = int(input('введите высоту'))
 
-if width <= 15 and length <=15 and height <= 15:
+if width <= 20 and length <=20 and height <= 15:
     print("Коробка №1")
 elif width > 200 or length > 200 or height > 200:
     print("Упаковка для лыж")
-elif 15 < width < 50 or 15 < length < 50 or 15 < height < 50:
+elif 15 < width < 50 or 20 < length < 50 or 20 < height < 50:
     print("Коробка №2")
 else: 
     print("Коробка №3")
@@ -62,7 +62,7 @@ else:
 '''Напишем программу, которая будет определять, счастливый билет или нет, исходя из суммы первых трех и последних трех цифр в номере билета'''
 
 import re
-ticket_number = input('введите 6 цифр номера билета')
+ticket_number = input('введите шестизначный номера билета')
 
 first_3_figures = (int(re.search("^(\d)(\d)(\d)(\d)(\d)(\d)$", ticket_number).group(1)) + 
 int(re.search("^(\d)(\d)(\d)(\d)(\d)(\d)$", ticket_number).group(2)) +
